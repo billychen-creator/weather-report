@@ -1,0 +1,78 @@
+body {
+  font-family: sans-serif;
+  padding: 20px 20px;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+h4 {
+  padding-top: 15px;
+}
+
+.container {
+  top: 40px;
+  left: 20px;
+  right: 0px;
+  width: 800px;
+}
+
+.current-weather-icon {
+  font-size: 100px;
+}
+
+.day-col {
+  text-align: center;
+}
+
+.forecast-weather-icon {
+  font-size: 50px;
+}
+
+.map {
+  height: 180px;
+  width: 100%;
+}
+
+.units {
+  position: relative;
+  top: -25px;
+}
+
+.weather-text {
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.search {
+  margin: 0 auto;
+  width: 360px;
+}
+
+#cond {
+  font-size: 30px;
+}
+
+#current-location-button {
+  margin-left: 10px;
+}
+
+#current-weather,
+#forecast-weather {
+  width: 540px;
+  margin: auto;
+}
+
+#temp {
+  font-size: 50px;
+}
+
+/* .search-button {
+  background-color: rgb(216, 214, 214) !important;
+}
+
+.button:hover {
+  background-color: #c2c4c4 !important;
+} */
