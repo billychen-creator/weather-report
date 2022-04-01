@@ -51,6 +51,11 @@ h4 {
   width: 360px;
 }
 
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
 #cond {
   font-size: 30px;
 }
@@ -69,10 +74,10 @@ h4 {
   font-size: 50px;
 }
 
-/* .search-button {
-  background-color: rgb(216, 214, 214) !important;
+.search-button {
+  background-color: rgb(216, 214, 214);
 }
 
 .button:hover {
-  background-color: #c2c4c4 !important;
-} */
+  background-color: #c2c4c4;
+}
