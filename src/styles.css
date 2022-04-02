@@ -19,8 +19,17 @@ h4 {
   width: 800px;
 }
 
-.day-col {
+.forecast-weather-date {
   text-align: center;
+}
+
+.forecast-weather-temperature-min {
+  opacity: 0.6;
+}
+
+#celsius-link,
+#fahrenheit-link {
+  text-decoration: none;
 }
 
 .forecast-row .active {
@@ -31,10 +40,6 @@ h4 {
 
 .forecast-row .active:hover {
   text-decoration: none;
-}
-
-.forecast-weather-icon {
-  font-size: 50px;
 }
 
 .map {
@@ -59,10 +64,6 @@ h4 {
 
 .weather-text {
   font-size: 25px;
-}
-
-#cond {
-  font-size: 30px;
 }
 
 #current-location-button {

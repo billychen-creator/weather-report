@@ -63,7 +63,7 @@
               <div class="row">
                 <div class="col forecast-row">
                   <h6 class="card-title"></h6>
-                  <img src="" alt="" id="icon" />
+                  <img src="" alt="" id="icon" width="120" />
                   <span class="temperature" id="temp"></span>
                   <span class="units"
                     ><a href="#" id="celsius-link" class="active">°C</a> |
@@ -87,45 +87,21 @@
           <div class="card" style="width: 540px">
             <div class="card-body">
               <div class="row">
-                <div class="col day-col">
+                <div class="col forecast-weather-date">
                   Mon <br />
-                  <i
-                    class="fa-solid fa-cloud-sun weather-icon forecast-weather-icon"
+                  <img src="http://openweathermap.org/img/wn/50d@2x.png"
+                  alt=""
+                  width="42"
                   ></i>
                   <br />
-                  <small class="text-muted">3 ° | 11 °</small>
+                  <small class="text-muted">
+                    <span class="forecast-weather-temperature-min">3 °</span>
+                    <span class="forecast-weather-temperature-max">
+                      | 11 °</span
+                    ></small
+                  >
                 </div>
-                <div class="col day-col">
-                  Tue <br />
-                  <i class="fa-solid fa-cloud-rain forecast-weather-icon"></i>
-                  <br />
-                  <small class="text-muted">2 ° | 10 °</small>
-                </div>
-
-                <div class="col day-col">
-                  Wed <br />
-                  <i class="fa-solid fa-cloud-rain forecast-weather-icon"></i>
-                  <br />
-                  <small class="text-muted">-1 ° | 9 °</small>
-                </div>
-
-                <div class="col day-col">
-                  Thu <br />
-                  <i
-                    class="fa-solid fa-cloud-sun weather-icon forecast-weather-icon"
-                  ></i>
-                  <br />
-                  <small class="text-muted">3 ° | 11 °</small>
-                </div>
-
-                <div class="col day-col">
-                  Fri <br />
-                  <i
-                    class="fa-solid fa-cloud-sun weather-icon forecast-weather-icon"
-                  ></i>
-                  <br />
-                  <small class="text-muted">4 ° | 12 °</small>
-                </div>
+                
               </div>
             </div>
           </div>
