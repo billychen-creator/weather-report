@@ -1,3 +1,32 @@
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+    <div class="forecast-weather-date">${day}</div>
+    <img 
+    src="http://openweathermap.org/img/wn/50d@2x.png"
+    alt=""
+    width="42"
+    />
+    <div class="forecast-weather-temperatures">
+    <span class="forecast-weather-temperature-min"> 3 °</span>
+    <span class="forecast-weather-temperature-max"> | 11 °</span
+    >
+    </div>
+    </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showCurrentWeather(response) {
   document.querySelector(
     "h4"
@@ -123,6 +152,7 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("London");
+displayForecast();
 
 // insert map by https://openlayers.org/
 var map = new ol.Map({
