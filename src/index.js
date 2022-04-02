@@ -4,9 +4,11 @@ function showCurrentWeather(response) {
   ).innerHTML = `Current weather in <i class="fa-solid fa-location-dot"></i> ${response.data.name}, ${response.data.sys.country}`;
 
   celsiusTemperature = response.data.main.temp;
-  console.log(celsiusTemperature);
+  console.log(response.data);
 
   document.querySelector("#temp").innerHTML = Math.round(celsiusTemperature);
+
+  document.querySelector("#wind").innerHTML = response.data.wind.speed;
 
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;

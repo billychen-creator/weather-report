@@ -42,24 +42,23 @@ h4 {
   width: 100%;
 }
 
-.units {
-  position: relative;
-  top: -25px;
-}
-
-.weather-text {
-  font-size: 25px;
-  margin-left: 10px;
-}
-
 .search {
   margin: 0 auto;
   width: 360px;
 }
 
+.units {
+  position: relative;
+  top: -25px;
+}
+
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
+}
+
+.weather-text {
+  font-size: 25px;
 }
 
 #cond {
@@ -79,12 +78,4 @@ h4 {
 #temp {
   font-size: 50px;
   color: rgb(33, 33, 33);
-}
-
-.search-button {
-  background-color: rgb(216, 214, 214);
-}
-
-.button:hover {
-  background-color: #c2c4c4;
 }
