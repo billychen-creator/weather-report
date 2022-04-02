@@ -23,6 +23,16 @@ h4 {
   text-align: center;
 }
 
+.forecast-row .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+  text-decoration: none;
+}
+
+.forecast-row .active:hover {
+  text-decoration: none;
+}
+
 .forecast-weather-icon {
   font-size: 50px;
 }
@@ -68,6 +78,7 @@ h4 {
 
 #temp {
   font-size: 50px;
+  color: rgb(33, 33, 33);
 }
 
 .search-button {
