@@ -1,27 +1,34 @@
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
     <div class="col-2">
-    <div class="forecast-weather-date">${day}</div>
-    <img 
-    src="http://openweathermap.org/img/wn/50d@2x.png"
-    alt=""
-    width="42"
-    />
-    <div class="forecast-weather-temperatures">
-    <span class="forecast-weather-temperature-min"> 3 °</span>
-    <span class="forecast-weather-temperature-max"> | 11 °</span
-    >
+      <div class="forecast-weather-date">${formatDay(forecastDay.dt)}</div>
+      <img 
+        src="http://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png"
+        alt=""
+        width="42"
+      />
+      <div class="forecast-weather-temperatures">
+        <span class="forecast-weather-temperature-min"> ${Math.round(
+          forecastDay.temp.min
+        )} °</span>
+        <span class="forecast-weather-temperature-max"> | ${Math.round(
+          forecastDay.temp.max
+        )} °</span
+        >
     </div>
     </div>
     `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -145,6 +152,14 @@ function formatDate(date) {
   return `${day}, ${month} ${date.getDate()} <i class="fa-regular fa-clock"></i> ${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
@@ -164,7 +179,7 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 searchCity("London");
 
 // insert map by https://openlayers.org/
-var map = new ol.Map({
+let map = new ol.Map({
   target: "map",
   layers: [
     new ol.layer.Tile({
