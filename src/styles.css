@@ -27,21 +27,6 @@ h4 {
   opacity: 0.6;
 }
 
-#celsius-link,
-#fahrenheit-link {
-  text-decoration: none;
-}
-
-.forecast-row .active {
-  color: rgb(33, 33, 33);
-  cursor: default;
-  text-decoration: none;
-}
-
-.forecast-row .active:hover {
-  text-decoration: none;
-}
-
 .map {
   height: 180px;
   width: 100%;
