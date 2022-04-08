@@ -8,7 +8,7 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-    <div class="col-2">
+    <div class="col">
       <div class="forecast-weather-date">${formatDay(forecastDay.dt)}</div>
       <img 
         src="http://openweathermap.org/img/wn/${
@@ -153,17 +153,3 @@ let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
 searchCity("London");
-
-// insert map by https://openlayers.org/
-let map = new ol.Map({
-  target: "map",
-  layers: [
-    new ol.layer.Tile({
-      source: new ol.source.OSM(),
-    }),
-  ],
-  view: new ol.View({
-    center: ol.proj.fromLonLat([-0.1257, 51.5085]),
-    zoom: 6,
-  }),
-});
