@@ -39,7 +39,7 @@
               style="width: 3150px"
               type="search"
               class="form-control"
-              placeholder="Search for a city"
+              placeholder="Enter a city"
               id="search-text-input"
             />
             <input
@@ -49,8 +49,8 @@
               id="search-button"
             />
 
-            <button class="btn btn-success w-100" id="current-location-button">
-              Current
+            <button class="btn btn-success w-100" id="local-button">
+              Local<i class="fa-solid fa-location-dot"></i>
             </button>
           </div>
         </form>
@@ -63,11 +63,18 @@
               <div class="row">
                 <div class="col forecast-row">
                   <h6 class="card-title"></h6>
-                  <img src="" alt="" id="icon" width="120" />
-                  <span class="temperature" id="temp"></span>
-                  <span class="units">°C</span>
+                  <img src="" alt="" id="icon" />
+                  <span>
+                    <span class="temperature" id="temp"></span>
+                    <span class="units">°C</span>
+                  </span>
                   <p class="card-text weather-text" id="description"></p>
+                  <p>Feels like: <span id="feels-like"></span> °C</p>
                   <p>Wind: <span id="wind"></span> km/h</p>
+                </div>
+
+                <div class="col">
+                  <img src="" id="picture" />
                 </div>
               </div>
             </div>
@@ -75,18 +82,17 @@
         </div>
 
         <div id="forecast-weather">
-          <h4>Five Days Forecast</h4>
+          <h5>Five Day Forecast</h5>
 
           <div class="card" style="width: 540px">
             <div class="card-body" id="forecast"></div>
           </div>
-          <small
-            ><a
-              href="https://github.com/billychen-creator/weather-report"
-              target="_blank"
-              >Open-source code</a
-            >, by Sibylle Schlumpf</small
-          >
+         <div style="padding-top: 20px">
+          <a
+            href="https://github.com/billychen-creator/weather-report"
+            target="_blank"
+            >Open-source code on GitHub</a
+          >, by Sibylle Schlumpf
         </div>
       </div>
     </div>

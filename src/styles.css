@@ -8,7 +8,8 @@ h1 {
   padding-bottom: 20px;
 }
 
-h4 {
+h4,
+h5 {
   padding-top: 15px;
 }
 
@@ -38,15 +39,16 @@ h4 {
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 750px;
   margin: 30px auto;
+  text-align: center;
 }
 
 .weather-text {
   font-size: 25px;
 }
 
-#current-location-button {
+#local-button {
   margin-left: 10px;
 }
 
@@ -54,6 +56,11 @@ h4 {
 #forecast-weather {
   width: 540px;
   margin: auto;
+}
+
+#picture {
+  padding-top: 40px;
+  width: 300px;
 }
 
 #temp {

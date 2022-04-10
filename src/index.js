@@ -15,7 +15,7 @@ function displayForecast(response) {
           forecastDay.weather[0].icon
         }@2x.png"
         alt=""
-        width="42"
+        width="64"
       />
       <div class="forecast-weather-temperatures">
         <span class="forecast-weather-temperature-min"> ${Math.round(
@@ -36,7 +36,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "3cc63b2045ffdc342811848b9c3cdbe0";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
@@ -51,6 +50,9 @@ function showCurrentWeather(response) {
 
   document.querySelector("#temp").innerHTML = Math.round(celsiusTemperature);
 
+  let feelsLike = response.data.main.feels_like;
+  document.querySelector("#feels-like").innerHTML = Math.round(feelsLike);
+
   let wind = response.data.wind.speed * 3.6;
   document.querySelector("#wind").innerHTML = Math.round(wind);
 
@@ -63,6 +65,13 @@ function showCurrentWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  let pictureElement = document.querySelector("#picture");
+
+  pictureElement.setAttribute(
+    "src",
+    `images/${response.data.weather[0].icon}.jpg`
+  );
 
   getForecast(response.data.coord);
 }
@@ -145,7 +154,7 @@ function formatDay(timestamp) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let currentButton = document.querySelector("#current-location-button");
+let currentButton = document.querySelector("#local-button");
 currentButton.addEventListener("click", getCurrentLocation);
 
 let dateElement = document.querySelector("h6");
