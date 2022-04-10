@@ -56,6 +56,16 @@ function showCurrentWeather(response) {
   let wind = response.data.wind.speed * 3.6;
   document.querySelector("#wind").innerHTML = Math.round(wind);
 
+  let sunriseTimestamp = response.data.sys.sunrise;
+  let sunriseTime = new Date(sunriseTimestamp * 1000);
+  document.querySelector("#sunrise").innerHTML =
+    sunriseTime.getHours() + ":" + sunriseTime.getMinutes();
+
+  let sunsetTimestamp = response.data.sys.sunset;
+  let sunsetTime = new Date(sunsetTimestamp * 1000);
+  document.querySelector("#sunset").innerHTML =
+    sunsetTime.getHours() + ":" + sunsetTime.getMinutes();
+
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
 
@@ -99,6 +109,7 @@ function searchLocation(position) {
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
+  document.querySelector("#search-text-input").value = "";
 }
 
 function formatDate(date) {

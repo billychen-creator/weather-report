@@ -1,10 +1,8 @@
 body {
-  font-family: sans-serif;
   padding: 20px 20px;
 }
 
 h1 {
-  text-align: center;
   padding-bottom: 20px;
 }
 
@@ -20,6 +18,10 @@ h5 {
   width: 800px;
 }
 
+.forecast-row p {
+  margin: 0;
+}
+
 .forecast-weather-date {
   text-align: center;
 }
@@ -29,6 +31,7 @@ h5 {
 }
 
 .search {
+  display: flex;
   margin: 0 auto;
   width: 360px;
 }
@@ -48,7 +51,8 @@ h5 {
   font-size: 25px;
 }
 
-#local-button {
+#local-button,
+#search-button {
   margin-left: 10px;
 }
 
@@ -59,11 +63,19 @@ h5 {
 }
 
 #picture {
-  padding-top: 40px;
+  border-radius: 0.25rem;
+  /*border: 5px solid black;*/
+  margin-top: 48px;
   width: 300px;
 }
 
 #temp {
   font-size: 50px;
   color: rgb(33, 33, 33);
+}
+
+#temp-celcius {
+  display: inline-block;
+  position: relative;
+  top: 15px;
 }

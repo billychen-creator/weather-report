@@ -32,7 +32,7 @@
         <h1>Weather report</h1>
 
         <form id="search-form">
-          <div class="mb-3 search" style="width: 360px; display: flex">
+          <div class="mb-3 search">
             <input
               autofocus="on"
               autocomplete="off"
@@ -50,7 +50,7 @@
             />
 
             <button class="btn btn-success w-100" id="local-button">
-              Local<i class="fa-solid fa-location-dot"></i>
+              <i class="fa-solid fa-location-dot"></i>
             </button>
           </div>
         </form>
@@ -64,13 +64,15 @@
                 <div class="col forecast-row">
                   <h6 class="card-title"></h6>
                   <img src="" alt="" id="icon" />
-                  <span>
+                  <span id="temp-celcius">
                     <span class="temperature" id="temp"></span>
                     <span class="units">°C</span>
                   </span>
                   <p class="card-text weather-text" id="description"></p>
                   <p>Feels like: <span id="feels-like"></span> °C</p>
                   <p>Wind: <span id="wind"></span> km/h</p>
+                  <p>Sunrise (GMT): <span id="sunrise"></span></p>
+                  <p>Sunset (GMT): <span id="sunset"></span></p>
                 </div>
 
                 <div class="col">
@@ -92,7 +94,7 @@
             href="https://github.com/billychen-creator/weather-report"
             target="_blank"
             >Open-source code on GitHub</a
-          >, by Sibylle Schlumpf
+          > by Sibylle Schlumpf
         </div>
       </div>
     </div>
